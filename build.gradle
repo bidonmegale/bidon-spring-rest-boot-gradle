@@ -1,3 +1,14 @@
+apply plugin: 'java'
+apply plugin: 'eclipse-wtp'
+apply plugin: 'idea'
+apply plugin: 'spring-boot' 
+apply plugin: 'war'
+
+
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+
+
 buildscript {
     ext {
         springBootVersion = '1.4.0.RELEASE'
@@ -12,23 +23,15 @@ buildscript {
     }
 }
 
-apply plugin: 'java'
-apply plugin: 'eclipse-wtp'
-apply plugin: 'idea'
-apply plugin: 'spring-boot' 
-apply plugin: 'war'
-
 
 war {
     baseName = 'springboot'
     version = '0.0.1-SNAPSHOT'
 }
-sourceCompatibility = 1.7
-targetCompatibility = 1.7
+
 
 repositories {
     mavenCentral()
-    maven { url "http://repo.spring.io/libs-milestone" }
 }
 
 configurations {
@@ -36,7 +39,6 @@ configurations {
 }
 
 dependencies {
-    compile("javax.servlet:jstl:1.2")
     compile ("org.springframework.boot:spring-boot-starter-web")
     providedRuntime("org.springframework.boot:spring-boot-starter-tomcat")
     providedRuntime 'org.apache.tomcat.embed:tomcat-embed-jasper'
