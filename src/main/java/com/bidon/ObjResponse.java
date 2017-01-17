@@ -11,7 +11,4 @@ public class ObjResponse {
 	public void setMiguel(String miguel) {
 		this.miguel = miguel;
 	}
-	
-	
-	
 }
