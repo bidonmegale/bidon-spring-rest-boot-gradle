@@ -11,7 +11,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @RequestMapping(value = {"/person"})
 public class PersonController {
 	
-    @RequestMapping(value = "/", produces = "application/json", method = RequestMethod.GET)
+    @RequestMapping(value = "/", produces = "application/json", 
+    		method = RequestMethod.GET)
     public ObjResponse index(){
     	
         System.out.println("Estou passando aki");
